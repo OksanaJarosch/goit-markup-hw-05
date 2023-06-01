@@ -109,6 +109,7 @@ img {
 }
 
 .nav-item {
+  position: relative;
   padding: 24px 0;
   display: block;
   font-family: inherit;
@@ -118,12 +119,26 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--title-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-item.active {
-  color: var(--button-hover);
+
+.nav-item.current-site::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--button-hover);
 }
+
 .nav-item:hover,
-.nav-item:focus {
+.nav-item:focus,
+.current-site {
   color: var(--button-hover);
 }
 
@@ -134,6 +149,10 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact:hover,
 .contact:focus {
@@ -204,6 +223,10 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -335,6 +358,10 @@ Section Team*/
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sotial-icon {
@@ -373,6 +400,10 @@ Section Team*/
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-logo {
@@ -442,6 +473,10 @@ Section Team*/
   align-items: center;
 
   color: var(--icon-bg);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-icon {
@@ -465,6 +500,10 @@ Section Team*/
   border: 1px solid var(--borders-color);
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: background-color, color, box-shadow, border;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.active {
@@ -526,6 +565,10 @@ Section Team*/
 
 .project-link {
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:is(:hover, :focus) {
