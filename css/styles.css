@@ -130,8 +130,7 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  margin-bottom: -1px;
+  bottom: -1;
 
   height: 4px;
   width: 100%;
